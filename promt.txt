@@ -1,0 +1,101 @@
+Create a complete POS (Point of Sale) system with full-stack implementation using the following specifications:
+
+BACKEND REQUIREMENTS:
+- Node.js + Express server running on PORT 8081
+- PostgreSQL database with Sequelize ORM
+- Database configuration:
+  * DB_HOST: localhost
+  * DB_PORT: 5432
+  * DB_NAME: txivfeej-shop
+  * DB_USER: postgres
+  * DB_PASS: 123
+- Sequelize models for Products, Transactions, Users, Categories, Customers
+- JWT authentication with role-based access (cashier/manager/admin)
+- RESTful APIs for all CRUD operations
+- Sequelize migrations and seeders for initial data
+- Real-time inventory updates
+- Sales reporting endpoints with Sequelize queries
+- Payment processing simulation
+- Proper error handling and validation middleware
+- CORS configuration for Nuxt.js frontend
+
+FRONTEND REQUIREMENTS:
+- Nuxt.js 3 application with TypeScript support
+- Modern UI framework (Nuxt UI, Tailwind CSS, or Vuetify)
+- SSR/SPA hybrid mode for optimal performance
+- Responsive design optimized for tablets and desktops
+- Main sales interface with product search, shopping cart, and checkout
+- Admin panel for product/inventory management
+- Sales reports and analytics dashboard
+- User authentication with Nuxt Auth module
+- Receipt generation and printing functionality
+- Real-time updates using WebSockets or Server-Sent Events
+
+SEQUELIZE DATABASE MODELS:
+1. Users: id, username, email, password, role, createdAt, updatedAt
+2. Categories: id, name, description, isActive
+3. Products: id, name, description, price, stock, categoryId, barcode, image
+4. Transactions: id, userId, total, tax, discount, paymentMethod, status
+5. TransactionItems: id, transactionId, productId, quantity, unitPrice
+6. Customers: id, name, email, phone, loyaltyPoints (optional)
+
+KEY FEATURES TO IMPLEMENT:
+1. Product management with barcode support and image upload
+2. Real-time inventory tracking with low stock alerts
+3. Transaction processing with multiple payment methods (cash, card, digital)
+4. Customer management with loyalty points system
+5. Sales reporting and analytics with date filters
+6. User role management (admin, manager, cashier permissions)
+7. Tax calculation and discount application
+8. Receipt generation with store branding
+9. Inventory management with supplier tracking
+10. Dashboard with sales metrics and charts
+
+NUXT.JS SPECIFIC REQUIREMENTS:
+- Use Nuxt.js composables for API calls
+- Implement proper SEO with meta tags
+- Use Nuxt.js middleware for authentication guards
+- Configure proxy for API calls to backend
+- Implement proper error pages (404, 500)
+- Use Nuxt.js plugins for global components
+- Implement proper loading states and transitions
+
+BACKEND API ENDPOINTS STRUCTURE:
+- Auth: POST /api/auth/login, /api/auth/register, /api/auth/logout
+- Products: GET/POST/PUT/DELETE /api/products
+- Categories: GET/POST/PUT/DELETE /api/categories  
+- Transactions: GET/POST /api/transactions
+- Users: GET/POST/PUT/DELETE /api/users
+- Reports: GET /api/reports/sales, /api/reports/inventory
+- Dashboard: GET /api/dashboard/stats
+
+TECHNICAL SPECIFICATIONS:
+- Include Sequelize migrations for database schema
+- Add proper validation using Joi or express-validator
+- Implement pagination for large datasets using Sequelize
+- Include comprehensive error handling
+- Add API rate limiting and security middleware
+- Use bcrypt for password hashing
+- Include sample data seeders for testing
+- Configure environment variables properly
+- Add API documentation with Swagger/OpenAPI
+
+NUXT.JS CONFIGURATION:
+- Configure nuxt.config.ts with proper modules
+- Set up proxy configuration for API calls
+- Configure Tailwind CSS or chosen UI framework
+- Add proper TypeScript interfaces for data models
+- Implement proper state management with Pinia
+- Configure build optimization
+
+ADDITIONAL REQUIREMENTS:
+- Include complete file and folder structure
+- Provide clear setup and installation instructions
+- Add Docker configuration for easy deployment
+- Include sample environment files
+- Provide database migration commands
+- Add basic unit tests for critical functions
+- Include proper logging with Winston or similar
+- Add input sanitization and SQL injection prevention
+
+Please provide the complete implementation with all files, proper folder structure, package.json configurations for both frontend and backend, Sequelize models with associations, Nuxt.js pages and components, API routes, and detailed setup instructions including database initialization commands.
