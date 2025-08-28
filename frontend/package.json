@@ -1,16 +1,46 @@
 {
-  "name": "frontend",
+  "name": "txivfeej-pos-frontend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "TXIV FEEJ POS System Frontend - Modern Point of Sale interface built with Nuxt.js 3",
+  "private": true,
   "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "dependencies": {
+    "@formkit/nuxt": "^1.6.5",
+    "@nuxt/ui": "^2.11.1",
+    "@nuxtjs/tailwindcss": "^6.8.4",
+    "@pinia/nuxt": "^0.5.1",
+    "@sidebase/nuxt-auth": "^0.6.2",
+    "@vueuse/nuxt": "^10.5.0",
+    "nuxt": "^3.8.0",
+    "pinia": "^2.1.7",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5"
+  },
   "devDependencies": {
-    "@types/node": "^24.3.0",
-    "typescript": "^5.9.2"
-  }
+    "@nuxt/typescript-build": "^3.0.2",
+    "@types/node": "^20.9.0",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "pos",
+    "point-of-sale",
+    "nuxt",
+    "vue",
+    "typescript",
+    "retail",
+    "inventory"
+  ],
+  "author": "TXIV FEEJ",
+  "license": "MIT"
 }

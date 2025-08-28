@@ -1,0 +1,61 @@
+{
+  "name": "ast-walker-scope",
+  "version": "0.8.2",
+  "description": "Traverse Babel AST with scope information.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/sxzz/ast-walker-scope#readme",
+  "bugs": {
+    "url": "https://github.com/sxzz/ast-walker-scope/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sxzz/ast-walker-scope.git"
+  },
+  "author": "三咲智子 Kevin Deng <sxzz@sxzz.moe>",
+  "funding": "https://github.com/sponsors/sxzz",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.28.3",
+    "ast-kit": "^2.1.2"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.28.2",
+    "@sxzz/eslint-config": "^7.1.2",
+    "@sxzz/prettier-config": "^2.2.3",
+    "@types/node": "^24.3.0",
+    "bumpp": "^10.2.3",
+    "eslint": "^9.33.0",
+    "magic-string": "^0.30.17",
+    "prettier": "^3.6.2",
+    "tsdown": "^0.14.1",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.2",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=20.18.0"
+  },
+  "prettier": "@sxzz/prettier-config",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "pnpm run lint --fix",
+    "build": "tsdown",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp"
+  }
+}
